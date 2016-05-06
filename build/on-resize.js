@@ -70,9 +70,12 @@ var initialize = function initialize(el) {
       };
       detector.destroy = function () {
         if (detector.elWasStaticPosition) el.style.position = '';
-        // Event handlers will be automatically removed.
-        // http://stackoverflow.com/questions/12528049/if-a-dom-element-is-removed-are-its-listeners-also-removed-from-memory
-        el.removeChild(objEl);
+
+        if (el.contains(objEl)) {
+          // Event handlers will be automatically removed.
+          // http://stackoverflow.com/questions/12528049/if-a-dom-element-is-removed-are-its-listeners-also-removed-from-memory
+          el.removeChild(objEl);
+        }
       };
 
       el.appendChild(objEl);
