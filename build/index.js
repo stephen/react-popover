@@ -64,7 +64,8 @@ var coreStyle = {
   position: 'absolute',
   top: 0,
   left: 0,
-  display: cssvalue('display', 'flex')
+  display: cssvalue('display', 'flex'),
+  visibility: 'hidden'
 };
 
 var faces = {
@@ -302,6 +303,9 @@ var Popover = (0, _react.createClass)({
     log('pos', pos);
     this.containerEl.style.top = pos.y + 'px';
     this.containerEl.style.left = pos.x + 'px';
+    setTimeout(()=> {
+      this.containerEl.style.visibility = 'visible';
+    }, 5);
 
     /* Calculate Tip Position */
 
