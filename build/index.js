@@ -112,7 +112,7 @@ var Popover = (0, _react.createClass)({
   mixins: [(0, _reactLayerMixin2['default'])()],
   getDefaultProps: function getDefaultProps() {
     return {
-      tipSize: 7,
+      tipSize: 16,
       preferPlace: null,
       place: null,
       offset: 4,
