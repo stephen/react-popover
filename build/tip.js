@@ -29,7 +29,7 @@ var Tip = _react2['default'].createClass({
       className: 'Popover-tipShape',
       points: points
     }));
-    return _react.createElement('div', { className: 'svg-container' }, [triangle]);
+    return _react.createElement('div', { className: 'svg-container' }, [triangle, _react.createElement('div', { className: 'cli-layer' }, null)]);
   }
 });
 
